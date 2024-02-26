@@ -126,7 +126,7 @@ function imageLoader() {
 		"bogosBinted/gameOver.jpg",
 		"bogosBinted/gameOverResp.jpg",
 		"bogosBinted/gameOverSmierc.jpg",
-		"bogosBinted/gilotyna.jpg",
+		// "bogosBinted/gilotyna.jpg",
 		"bogosBinted/gilotynaGG.jpg",
 		"bogosBinted/gsg.jpg",
 		"bogosBinted/ilia.jpg",
