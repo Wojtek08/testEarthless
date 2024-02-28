@@ -2032,7 +2032,7 @@ let c1u2e9v2 = new MyEvent(
 	[
 		new MyLine(
 			"bogosBinted/becia.jpg", "Becia", colors["red"],
-			"Zgadza się! Wystaczy ukończyć 21 rok życia i mieć prawa wyborcze. Dobrze, skoro pytania mamy za sobą, możemy przejść do właciwej części wywiadu. Jak pan się przygoto..."
+			"Zgadza się! Wystarczy ukończyć 21 rok życia i mieć prawa wyborcze. Dobrze, skoro pytania mamy za sobą, możemy przejść do właciwej części wywiadu. Jak pan się przygoto..."
 		),
 	],
 	"*podejdź do wywiadu poważnie, nie unikaj trudnych pytań (wymaga skupienia)*",
@@ -2797,7 +2797,7 @@ let c2u2e2v1 = new MyEvent(
 let c2u2e2v2 = new MyEvent(
 	"bogosBinted/stol.jpg",
 	[new MyLine(
-		"bogosBinted/ilie.jpg", "Ilia", colors["purple"],
+		"bogosBinted/ilia.jpg", "Ilia", colors["purple"],
 		"No właśnie! Dwutlenek węgla jest wydychany przez ludzi, więc z tym nie będzie problemu. Podobnie z wodą, jeśli zaprojektujemy odpowiednie systemy filtracji, nigdy nam jej nie zabraknie. Jeśli chodzi o światło, niekoniecznie musi być ono słoneczne, ale musimy użyć specialnych lamp dostosowanych do roślin."
 		),
 		new MyLine(
