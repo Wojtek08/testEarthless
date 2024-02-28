@@ -147,7 +147,10 @@ function imageLoader() {
 		"bogosBinted/stol.jpg",
 		"bogosBinted/Y.jpg",
 		"bogosBinted/zeby.jpg",
-		"bogosBinted/nikita.jpg"
+		"bogosBinted/nikita.jpg",
+		"bogosBinted/taxi.jpg",
+		"bogosBinted/app.jpg",
+		"bogosBinted/endingScreen.jpg"
 	]
 
 	let doneArray = []
@@ -382,6 +385,7 @@ let data = {
 	marcinsDecision: false,
 
 	destination: "earth",
+	host: "ludzie",
 };
 
 var colorNerds = window.getComputedStyle(nerds).getPropertyValue("--pseudoElColor");
@@ -890,7 +894,7 @@ function endOfTheGame(text, img) {
 	body.style.setProperty("background-image", "url()");
 	body.className = "end";
 	setTimeout(function() {
-		body.style.setProperty("background-image", "url(bogosBinted/"+img+")");
+		body.style.setProperty("background-image", "url(bogosBinted/"+img+".jpg)");
 
 		let div = document.createElement("div");
 		let p = document.createElement("p");
@@ -1004,8 +1008,9 @@ function changePlanet() {
 	p1.addEventListener("click", function() {
 		if(data.stats.fuel>=.9){
 			data.destination = "koi"
+			data.host = "Nerdzi"
 			data.stats.fuel-=.8
-			changeChapterPlace(3, "Kosmiczny pierUg")
+			changeChapterPlace(3, "Kosmiczny PierUg")
 			doTheEvent(c3u1e1);
 			noti("Wybrano cel: KOI-4878.01");
 		}else noti("Nie masz wystarczająco paliwa.")
@@ -1013,16 +1018,18 @@ function changePlanet() {
 
 	p2.addEventListener("click", function() {
 		data.destination = "trap"
+		data.host = "Magikale"
 		data.stats.fuel-=.3
-		changeChapterPlace(3, "Kosmiczny pierUg")
+		changeChapterPlace(3, "Kosmiczny PierUg")
 		doTheEvent(c3u1e1);
 		noti("Wybrano cel: TRAPPIST-1e");
 	})
 
 	p3.addEventListener("click", function() {
 		data.destination = "prox"
+		data.host = "Agresusi"
 		data.stats.fuel-=.2
-		changeChapterPlace(3, "Kosmiczny pierUg")
+		changeChapterPlace(3, "Kosmiczny PierUg")
 		doTheEvent(c3u1e1);
 		noti("Wybrano cel: Proxima Centauri b");
 	})
@@ -1219,11 +1226,11 @@ let c0u2e2 = new MyEvent(
 	"...",
 	function (){
 		doTheEvent(c0u2e3);
-		nextDub = ""
+		nextDub = "c0u2e3"
 	},
 	function (){
 		doTheEvent(c0u2e3);
-		nextDub = ""
+		nextDub = "c0u2e3"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -1886,7 +1893,7 @@ let c1u2e8v1 = new MyEvent(
 	function () {
 		data.stats.publicOpinion+=.05
 		doTheEvent(c1u2e9v2);
-		nextDub = "c1u2e9v1"
+		nextDub = "c1u2e9v2"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -2170,7 +2177,7 @@ let c1u2e12v2 = new MyEvent(
 	"c1u2e12v2R"
 )
 
-let c1u2e13v1 = new MyEvent( // nie ma 
+let c1u2e13v1 = new MyEvent(
 	"bogosBinted/stol.jpg",
 	[new MyLine(
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
@@ -2296,11 +2303,11 @@ let c1u2e15v1 = new MyEvent(
 	"c1u2e15v1R"
 )
 
-let c1u2e16v1 = new MyEvent( // nie ma 
+let c1u2e16v1 = new MyEvent(
 	"bogosBinted/radio.jpg",
 	[new MyLine(
 		"bogosBinted/becia.jpg", "Becia", colors["red"],
-		"Uwaga, Państwowa Komisja Wyborcza podała wyniki wyborów prezydenckich 2060! Wybory rozstrzygnęły się w pierwszej turze, a ich zwycięzcą zostaje Jakub Bukaj, zdobywając 65% głosów. Gratualacje dla Pana prezydenta!"
+		"Uwaga, Państwowa Komisja Wyborcza podała wyniki wyborów prezydenckich 2060! Wybory zakończyły się w pierwszej turze, a ich zwycięzcą zostaje Jakub Bukaj, zdobywając 65% głosów. Gratualacje dla Pana prezydenta!"
 	),new MyLine(
 		"bogosBinted/marcin.jpg", "Marcin", colors['aqua'],
 		"MAMY TO!"
@@ -2334,7 +2341,7 @@ let c1u2e17v2 = new MyEvent(
 	"bogosBinted/gsg.jpg",
 	[new MyLine(
 		"bogosBinted/noPfpUser.jpg", "", colors["grey"],
-		"Gratulacje, odblokowałeś pierwszy wynalazek: genereator sztucznej grawitacji! Tym razem jeszcze ujdzie Ci to na sucho, ale pamętaj, aby szanować Alberta."
+		"Gratulacje, odblokowałeś pierwszy wynalazek: generator sztucznej grawitacji! Tym razem jeszcze ujdzie Ci to na sucho, ale pamętaj, aby szanować Alberta."
 	)],
 	"Okej...",
 	"Rozumiem.",
@@ -2649,7 +2656,7 @@ let c2u1e4v2 = new MyEvent(
 	"c2u1e4v2R"
 )
 
-let c2u2e1 = new MyEvent( // nie ma
+let c2u2e1 = new MyEvent(
 	"bogosBinted/stol.jpg",
 	[new MyLine(
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
@@ -2689,7 +2696,7 @@ let c2u2e1 = new MyEvent( // nie ma
 	"c2u2e1R"
 )
 
-let c2u2e2v1 = new MyEvent( // nie ma
+let c2u2e2v1 = new MyEvent(
 	"bogosBinted/stol.jpg",
 	[new MyLine(
 		"bogosBinted/ilia.jpg", "Ilia", colors["purple"],
@@ -2731,7 +2738,7 @@ let c2u2e2v1 = new MyEvent( // nie ma
 	"c2u2e2v1R"
 )
 
-let c2u2e2v2 = new MyEvent( // nie ma
+let c2u2e2v2 = new MyEvent(
 	"bogosBinted/stol.jpg",
 	[new MyLine(
 		"bogosBinted/ilie.jpg", "Ilia", colors["purple"],
@@ -2774,7 +2781,7 @@ let c2u2e2v2 = new MyEvent( // nie ma
 	"c2u2e2v2R"
 )
 
-let c2u2e3v1 = new MyEvent( // nie ma
+let c2u2e3v1 = new MyEvent(
 	"bogosBinted/amina.jpg",
 	[new MyLine(
 		"bogosBinted/amina.jpg", "Amina", colors["lightpurple"],
@@ -2794,7 +2801,7 @@ let c2u2e3v1 = new MyEvent( // nie ma
 	),
 	new MyLine(
 		"bogosBinted/amina.jpg", "Amina", colors["lightpurple"],
-		"Te kopalnie byłyby pod terenem, zamieszkiwanym przez sporą ilość ludzi. Potencjalne zawalenie się którejkolwiek z kopalni, skutkuje śmiercią wielu z nich. Setek. Albo nawet i tysięcy."
+		"Te kopalnie byłyby pod terenem, zamieszkiwanym przez sporą ilość ludzi. Potencjalne zawalenie się którejkolwiek z kopalni, skutkuje śmiercią wielu mieszkańców. Setek. Albo nawet i tysięcy."
 	)],
 	"Trudno, skoro nie ma innych opcji, zlećcie to komuś.",
 	"Nie możemy ryzykować życia niewinnych ludzi!",
@@ -2814,7 +2821,7 @@ let c2u2e3v1 = new MyEvent( // nie ma
 	"c2u2e3v1R"
 )
 
-let c2u2e3v2 = new MyEvent( // nie ma
+let c2u2e3v2 = new MyEvent(
 	"bogosBinted/amina.jpg",
 	[new MyLine(
 		"bogosBinted/amina.jpg", "Amina", colors["lightpurple"],
@@ -2839,7 +2846,7 @@ let c2u2e3v2 = new MyEvent( // nie ma
 	"c2u2e3v2R"
 )
 
-let c2u2e4v1 = new MyEvent( // nie ma
+let c2u2e4v1 = new MyEvent(
 	"bogosBinted/stol.jpg",
 	[new MyLine(
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
@@ -3037,11 +3044,11 @@ let c3u1e2v1 = new MyEvent(
 	"Skoro wszystko gotowe, możemy już startować.",
 	function (){
 		doTheEvent(c3u1e3v1)
-		//nextDub = "cuev"
+		nextDub = "c3u1e3v1"
 	},
 	function (){
 		doTheEvent(c3u2e1v)
-		//nextDub = "cuev"
+		nextDub = "c3u1e3v1"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
@@ -3054,10 +3061,9 @@ let c3u1e3v1 = new MyEvent(
 		'Cieszę się, że pytasz. Więc, o co chodzi z tym całym AutoPlanetoPilotem? Otóż ten system wykorzystuje zjawisko znane jako "asysta grawitacyjna", które pozwala na zwiększenie prędkości pojazdu kosmicznego poprzez wykorzystanie grawitacji innych planet! To tak jakby korzystać z siły pchającej nas do przodu, wyłącznie dzięki oddziaływaniu grawitacyjnemi! Tylko trzeba z tym uważać. To nie jest kwestia po prostu wlepienia się na orbitę Marsa czy Jowisza i czekania, aż grawitacja nas wystrzeli w kosmos! Nie, to o wiele bardziej skomplikowane! AutoPlanetoPilot musi precyzyjnie obliczać trajektorię, prędkość i kąt podejścia do danej planety, aby wykorzystać jej grawitację w najbardziej efektywny sposób! To jak gra w kosmicznego bilarda, tylko z milionami planet i gwiazd jako kule!'
 	)],
 	"A dasz radę zrobić te działka protonowe?",
-	"Dobra robota, teraz się bierz za działka protownowe.",
+	"Dobra robota, teraz się bierz za działka protownowe.", //!!!!!! KOMUNIKAT O WYNALAZKU
 	function (){
-		//doTheEvent(cuev)
-		//nextDub = "cuev"
+
 	},
 	function (){
 		//doTheEvent(cuev)
@@ -3213,9 +3219,9 @@ let c3u2e2v2 = new MyEvent(
 )
 
 let c3u2e2v3 = new MyEvent(
-	"bogosBinted/jakub.jpg",
+	"bogosBinted/marcin.jpg",
 	[new MyLine(
-		"bogosBinted/jakub.jpg", "Jakub", colors[""],
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
 		"Ludzie dowiedzieli się o nierównych warunkach na statku. Chcą za to tańsze bilety."
 	)],
 	"Obniż ceny, byle z nami polecieli.",
@@ -3238,9 +3244,9 @@ let c3u2e2v3 = new MyEvent(
 )
 
 let c3u2e2v4 = new MyEvent(
-	"bogosBinted/jakub.jpg",
+	"bogosBinted/marcin.jpg",
 	[new MyLine(
-		"bogosBinted/jakub.jpg", "Jakub", colors["aqua"],
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
 		"Mimo tego co mówiłeś na live, wzrosło zainteresowanie lotem, ale kończą nam się miejsca!"
 	)],
 	"Nie możemy już wpuścić więcej.",
@@ -3325,7 +3331,7 @@ let c3u3e1 = new MyEvent(
 	"bogosBinted/chmurka.jpg",
 	[new MyLine(
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
-		"Start przeszedł bez zarzutu, już jesteśmy w drodze na "+data.destination+"! Niestety już zaczynam widzieć pierwsze problemy."
+		"Start przeszedł bez zarzutu, już jesteśmy w drodze na "+data.destination+"! Niestety już zaczynam widzieć pierwsze problemy, mój zespół już ustawia się w kolejce z kolejnymi sprawami."
 	)],
 	"...",
 	"...",
@@ -3341,7 +3347,7 @@ let c3u3e1 = new MyEvent(
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] 
 )
 
-let c3u3e2v1 = new MyEvent(
+let c3u3e2v1 = new MyEvent( 
 	"bogosBinted/henryk.jpg",
 	[new MyLine(
 		"bogosBinted/henryk.jpg", "Henryk", colors["brown"],
@@ -3365,7 +3371,672 @@ let c3u3e3v1 = new MyEvent(
 	"bogosBinted/amina.jpg",
 	[new MyLine(
 		"bogosBinted/ilia.jpg", "Ilia", colors["purple"],
-		"Kuba, musimy powoli myśleć o tym jak się przygotować do życia na nowej planecie."
+		"Kuba, musimy powoli myśleć o tym jak się przygotować do życia na nowej planecie. Będziemy musieli utworzyć pole magnetyczne, aby uchronić się przed kosmicznym promieniowaniem. Wiesz z czego składa się promieniowanie kosmiczne?"
+	)],
+
+	// Po drugie: musimy dodać tlen do atmosfery, a konkretniej zmienić go z dwutlenkiem węgla. Posadzenie tam roślin powinno załatwić sprawę.  
+
+	"Sigma, omega i lambda",
+	"Alfa, beta i gamma",
+	function (){
+		doTheEvent(c3u3e4v1)
+		data.stats.research-=.1
+		//nextDub = "cuev"
+	},
+	function (){
+		data.stats.research+=.1
+		doTheEvent(c3u3e4v2)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+let c3u3e4v1 = new MyEvent(
+	"bogosBinted/ilia.jpg",
+	[new MyLine(
+		"bogosBinted/ilia.jpg", "Ilia", colors["purple"],
+		"Ty niedoedukowany chloroplaście, chodziło o alfa, beta i gamma. W każdym razie jest ono śmiertelnie niebezbpieczne dla człowieka, wieć będziemy potrzebowali sporo prądu na planecie, żeby stworczyć pole magnetyczne."
+	)],
+	"Da się zrobić.",
+	"Nie zawracaj mi tym teraz głowy, idź z tym do Alberta",
+	function (){
+		doTheEvent(c3u3e5v1)
+		//nextDub = "cuev"
+	},
+	function (){
+		doTheEvent(c3u3e5v1)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, -.2, 0, .1, 0, 0], //
+	[0, 0, 0, 0, .2, 0, -.1, 0, 0] //
+)
+
+let c3u3e4v2 = new MyEvent(
+	"bogosBinted/ilia.jpg",
+	[new MyLine(
+		"bogosBinted/ilia.jpg", "Ilia", colors["purple"],
+		"Dokładnie tak, i są one śmiertelnie niebezbpieczne dla człowieka, wieć będziemy potrzebowali sporo prądu na planecie, żeby stworczyć pole magnetyczne."
+	)],
+	"Da się zrobić.",
+	"Nie zawracaj mi tym teraz głowy, idź z tym do Alberta",
+	function (){
+		doTheEvent(c3u3e5v1)
+		//nextDub = "cuev"
+	},
+	function (){
+		doTheEvent(c3u3e5v1)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, -.2, 0, .1, 0, 0], //
+	[0, 0, 0, 0, .2, 0, -.1, 0, 0] //
+)
+
+let c3u3e5v1 = new MyEvent(
+	"bogosBinted/Amina.jpg",
+	[new MyLine(
+		"bogosBinted/amina.jpg", "Amina", colors["lightpurple"],
+		"Jeśli chodzi o kolonizację to też mam sprawę. Musimy dodać tlen do atmosfery, a konkretniej zmienić go z dwutlenkiem węgla. Posadzenie tam roślin powinno załatwić sprawę, ale to zajmie sporo czasu i będzie bardzo kosztowne"
+	)],
+	"Do zrobienia.",
+	"Musiscie wymyślić jakiś tańszy sposób",
+	function (){
+		doTheEvent(c3u3e6v1)
+		//nextDub = "cuev"
+	},
+	function (){
+		doTheEvent(c3u3e6v1)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, -.2, 0, .1, 0, 0], //
+	[0, 0, 0, 0, .2, 0, -.1, 0, 0] //
+)
+
+let c3u3e6v1 = new MyEvent(
+	"bogosBinted/krzychu.jpg",
+	[new MyLine(
+		"bogosBinted/krzychu.jpg", "Krzychu", colors["orange"],
+		"HAHAH, OD POCZĄTKU WIEDZIAŁEM!"
+	),
+	new MyLine(
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
+		"No i co się tak cieszysz, o co chodzi?"
+	),
+	new MyLine(
+		"bogosBinted/krzychu.jpg", "Krzychu", colors["orange"],
+		"Próbują się z nami skontaktwać ci kosmici z "+data.destination+" - "+data.host+"!"
+	)],
+	"Wow, naprawdę w to nie wierzyłem.",
+	"O czym mówią?",
+	function (){
+		changeChapterPlace(3, "Kosmiczny pieróg, 50% trasy.")
+		
+		if(data.host === "Nerdzi"){
+			doTheEvent(c3u4e1v1)			
+		}else if(data.host === "Magikale"){
+			doTheEvent(c3u4e1v2)
+		}else if(data.host ==="Agresusi"){
+			doTheEvent(c3u4e1v3)
+		}
+	},
+	function (){
+		changeChapterPlace(3, "Kosmiczny pieróg, 50% trasy.")
+		
+		if(data.host === "Nerdzi"){
+			doTheEvent(c3u4e1v1)			
+		}else if(data.host === "Magikale"){
+			doTheEvent(c3u4e1v2)
+		}else if(data.host ==="Agresusi"){
+			doTheEvent(c3u4e1v3)
+		}
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+let c3u4e1v1 = new MyEvent(
+	"bogosBinted/nerd.jpg",
+	[new MyLine(
+		"bogosBinted/nerd.jpg", "Nerd", colors["yellow"],
+		"Witajcie Ziemianie, zauważyliśmy, że zmierzacie w naszym kierunku! Chcę tylko przekazać, że jesteście tu mile widziani tylko, jeśli jesteście wystarczająco rozwinięci technologicznie, żeby nam pomóc w badaniach, inaczej nie podlecicie bliżej bez naszej zgody!"
+	)],
+	"Hmm ciekawe, zapytam Marcina co możnaby im odpowiedzieć.",
+	"Marcin, podejdź tu! Sprawa jest.",
+	function (){
+		doTheEvent(c3u4e2v1)
+		//nextDub = "cuev"
+	},
+	function (){
+		doTheEvent(c3u4e2v1)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+let c3u4e1v2 = new MyEvent(
+	"bogosBinted/nikita.jpg",
+	[new MyLine(
+		"bogosBinted/nikita.jpg", "Nikita", colors["darkblue"],
+		"Witajcie ziemianie, jestem Nikita, przywódca Magikali. Mamy dobre intencje i mamy nadzieję, że wy też, haha. Zweryfikujemy to." //przywódczyni??
+	)],
+	"Hmm ciekawe, zapytam Marcina co możnaby im odpowiedzieć.",
+	"Marcin, podejdź tu! Sprawa jest.",
+	function (){
+		doTheEvent(c3u4e2v1)
+		//nextDub = "cuev"
+	},
+	function (){
+		doTheEvent(c3u4e2v1)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+let c3u4e1v3 = new MyEvent( // nie ma 
+	"bogosBinted/agresus.jpg",
+	[new MyLine(
+		"bogosBinted/agresus.jpg", "Agresus", colors["red"],
+		"Ludzie, sprawa prosta. Lecicie tu, to służycie NAM, albo nie pożyjecie długo tymi waszymi ziemskimi życiami."
+	)],
+	"Hmm ciekawe, zapytam Marcina co możnaby im odpowiedzieć.",
+	"Marcin, podejdź tu! Sprawa jest.",
+	function (){
+		doTheEvent(c3u4e2v1)
+		//nextDub = "cuev"
+	},
+	function (){
+		doTheEvent(c3u4e2v1)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+let c3u4e2v1 = new MyEvent(
+	"bogosBinted/marcin.jpg",
+	[new MyLine(
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
+		"Na ten moment wychodzi, że musimy do tego podejść pokojowo. Nie wiemy jak bardzo tak naprawdę są rozwinięci, więc radziłbym przede wszystkim liczyć na pokój."
+	)],
+	"A jeśli lepiej będzie zaatakować?",
+	"A co jeśli nie będą chcieli pokoju?",
+	function (){
+		doTheEvent(c3u4e3v1)
+		//nextDub = "cuev"
+	},
+	function (){
+		doTheEvent(c3u4e3v1)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
+)
+
+let c3u4e3v1 = new MyEvent(
+	"bogosBinted/marcin.jpg",
+	[new MyLine(
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
+		"Wtedy będziemy zmuszeni albo uciekać i liczyć na szczęście gdzieś indziej, albo walczyć, ale jesteśmy i na to gotowi, prawda albert?"
+	)],
+	"Oo już?",
+	"Nie chce mi się go znowu słuchać, wyślijmy im tą wiadomość.",
+	function (){
+		doTheEvent(c3u4e4v1)
+		//nextDub = "cuev"
+	},
+	function (){
+		doTheEvent(c3u4e4v1)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], 
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
+)
+
+let c3u4e4v1 = new MyEvent( //dzialo jonowoprotonowe
+	"bogosBinted/plp.jpg",
+	[new MyLine(
+		"bogosBinted/albert.jpg", "Albert", colors["darkred"],
+		"Ha! Oto przed wami majestatyczna potęga - działko protonowe! To monstrum technologii, które przemienia mikroskopijne protony w niebezpieczne pociski o potężnej energii! Gdy te malutkie cząsteczki są wystrzeliwane z prędkością bliską światła, nic nie jest w stanie im się oprzeć. Przebijają się przez materiał jak gorący nóż przez masło, powodując chaos i zniszczenie na swojej drodze. To jak burza na horyzoncie, gotowa zaorać wszystko, co stanie na jej drodze! Ale, oczywiście, ja, jako twórca tej bestii, używam jej moc w pełnej świadomości i z najwyższą ostrożnością. Działko protonowe - symbol potęgi i siły ludzkiego umysłu, ale także ostrzeżenie przed jej niewłaściwym użyciem. Bo z wielką mocą przychodzi wielka odpowiedzialność, a ja jestem gotów ponieść tę odpowiedzialność w imię nauki i postępu!"
+	)],
+	"Super, nagrajmy już tą wiadomość.",
+	"Więcej cię już nie słucham.",
+	function (){
+		doTheEvent(c3u5e1v1)
+		//nextDub = "cuev"
+	},
+	function (){
+		doTheEvent(c3u5e1v1)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, .05, 0, 0], //
+	[0, 0, 0, 0, 0, 0, -.1, 0, 0] //
+)
+
+let c3u5e1v1 = new MyEvent( //nerd
+	"bogosBinted/chmurka.jpg",
+	[new MyLine(
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
+		"Muszę podjąć decyzję."
+	)],
+	"Będę dążył do pokoju",
+	"Nie po to mamy działa protonowe, żeby ich teraz nie używać!",
+	function (){
+		doTheEvent(c3u5e2v1)
+	},
+	function (){
+		doTheEvent(c3u5e2v2)
+	},
+	[0, 0, 0, 0, .1, .2, 0, 0, 0],
+	[0, 0, -.4, 0, -.2, -.2, 0, 0, 0]
+)
+
+let c3u5e1v2 = new MyEvent( //mag
+	"bogosBinted/chmurka.jpg",
+	[new MyLine(
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
+		"Muszę podjąć decyzję."
+	)],
+	"Będę dążył do pokoju",
+	"Nie po to mamy działa protonowe, żeby ich teraz nie używać!",
+	function (){
+		doTheEvent(c3u5e2v3)
+	},
+	function (){
+		doTheEvent(c3u5e2v4)
+	},
+	[0, 0, 0, 0, .1, .2, 0, 0, 0],
+	[0, 0, -.4, 0, -.2, -.2, 0, 0, 0]
+)
+
+let c3u5e1v3 = new MyEvent( //agr
+	"bogosBinted/chmurka.jpg",
+	[new MyLine(
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
+		"Muszę podjąć decyzję."
+	)],
+	"Będę dążył do pokoju",
+	"Nie po to mamy działa protonowe, żeby ich teraz nie używać!",
+	function (){
+		doTheEvent(c3u5e2v5)
+	},
+	function (){
+		doTheEvent(c3u5e2v6)
+	},
+	[0, 0, 0, 0, .1, .2, 0, 0, 0],
+	[0, 0, -.4, 0, -.2, -.2, 0, 0, 0]
+)
+
+let c3u5e2v1 = new MyEvent( // nie ma 
+	"bogosBinted/kamera.jpg",
+	[new MyLine(
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
+		"Drodzy Nerdzi! Dziękuję za waszą wiadomość i pokojowe nastawienie. Liczę, że kiedy dolecimy, dogadamy się na temat wspólnych badań naukowych!"
+	),
+	new MyLine(
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
+		"No, to teraz czekamy na odpowiedź." 
+	)],
+	"Oby odpowiedzieli jak najszybciej",
+	"Mam nadzieję, że to nie potrwa długo.",
+	function (){
+		changeChapterPlace(4, "Kosmiczny PierUg, 95% trasy")
+		data.stats.food-=.1
+		if(data.stats.research>=.4){
+			doTheEvent(c3u5e3v1)
+		}else{
+			doTheEvent(c3u5e3v2)
+		}
+	},
+	function (){
+		changeChapterPlace(4, "Kosmiczny PierUg, 95% trasy")
+		data.stats.food-=.1
+		if(data.stats.research>=4){
+			doTheEvent(c3u5e3v1)
+		}else{
+			doTheEvent(c3u5e3v2)
+		}
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+let c3u5e2v2 = new MyEvent(
+	"bogosBinted/kamera.jpg",
+	[new MyLine(
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
+		"Nerdzi, nie boimy się was i nie zamierzamy wam podlegać, a więc możecie się szykować na wojnę, ale wiedzcie, że nie macie z nami szans!"
+	),
+	new MyLine(
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
+		"Nie wierzę, że to robisz..."
+	)],
+	"Spokojnie, przecież sobie poradzimy.",
+	"Robię to, co uważam za słuszne",
+	function (){
+		changeChapterPlace(4, "Kosmiczny PierUg, 95% trasy")
+		data.stats.food-=.1
+		doTheEvent(c3u5e3v2)
+		//nextDub = "cuev"
+	},
+	function (){
+		changeChapterPlace(4, "Kosmiczny PierUg, 95% trasy")
+		data.stats.food-=.1
+		doTheEvent(c3u5e3v2)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, -.1, 0, 0, 0] //
+)
+
+let c3u5e2v3 = new MyEvent(
+	"bogosBinted/kamera.jpg",
+	[new MyLine(
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
+		"Droga Nikito! Dziękuję za Twoją wiadomość i pokojowe nastawienie. Liczę, że kiedy dolecimy i poznamy się lepiej, poznasz nasze dobre intencje i dogadamy się na wspólne warunki życia 2 cywilizacji."
+	),
+	new MyLine(
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
+		"No, to teraz czekamy na odpowiedź." 
+	)],
+	"Oby odpowiedzieli jak najszybciej",
+	"Mam nadzieję, że to nie potrwa długo.",
+	function (){
+		changeChapterPlace(4, "Kosmiczny PierUg, 95% trasy")
+		data.stats.food-=.1
+		if(data.stats.publicOpinion>=.6){
+			doTheEvent(c3u5e3v3)
+		}else{
+			doTheEvent(c3u5e3v4)
+		}
+		// doTheEvent(c3u5e3v3)
+		//nextDub = "cuev"
+	},
+	function (){
+		changeChapterPlace(4, "Kosmiczny PierUg, 95% trasy")
+		data.stats.food-=.1
+		if(data.stats.publicOpinion>=.6){
+			doTheEvent(c3u5e3v3)
+		}else{
+			doTheEvent(c3u5e3v4)
+		}
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+let c3u5e2v4 = new MyEvent(
+	"bogosBinted/kamera.jpg",
+	[new MyLine(
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
+		"Magikale, nie boimy się was i nie zamierzamy wam podlegać, a więc możecie się szykować na wojnę, ale wiedzcie, że nie macie z nami szans!"
+	),
+	new MyLine(
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
+		"Nie wierzę, że to robisz..."
+	)],
+	"Spokojnie, przecież sobie poradzimy.",
+	"Robię to, co uważam za słuszne",
+	function (){
+		changeChapterPlace(4, "Kosmiczny PierUg, 95% trasy")
+		data.stats.food-=.1
+		doTheEvent(c3u5e3v4)
+		//nextDub = "cuev"
+	},
+	function (){
+		changeChapterPlace(4, "Kosmiczny PierUg, 95% trasy")
+		data.stats.food-=.1
+		doTheEvent(c3u5e3v4)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, -.1, 0, 0, 0] //
+)
+
+let c3u5e2v5 = new MyEvent(
+	"bogosBinted/kamera.jpg",
+	[new MyLine(
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
+		"Drodzy Agresusi! Postaramy się do was dostosować i mimo wszystko liczę na to, że się jakoś dogadamy."
+	),
+	new MyLine(
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
+		"No, to teraz czekamy na odpowiedź." 
+	)],
+	"Oby odpowiedzieli jak najszybciej",
+	"Mam nadzieję, że to nie potrwa długo.",
+	function (){
+		changeChapterPlace(4, "Kosmiczny PierUg, 95% trasy")
+		data.stats.food-=.1
+		doTheEvent(c3u5e3v5)
+		//nextDub = "cuev"
+	},
+	function (){
+		changeChapterPlace(4, "Kosmiczny PierUg, 95% trasy")
+		data.stats.food-=.1
+		doTheEvent(c3u5e3v5)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+let c3u5e2v6 = new MyEvent(
+	"bogosBinted/kamera.jpg",
+	[new MyLine(
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
+		"Agresusi, nie boimy się was i nie zamierzamy wam podlegać, a więc możecie się szykować na wojnę, ale wiedzcie, że nie macie z nami szans!"
+	),
+	new MyLine(
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
+		"Nie wierzę, że to robisz..."
+	)],
+	"Spokojnie, przecież sobie poradzimy.",
+	"Robię to, co uważam za słuszne",
+	function (){
+		changeChapterPlace(4, "Kosmiczny PierUg, 95% trasy")
+		data.stats.food-=.1
+		doTheEvent(c3u5e3v6)
+		//nextDub = "cuev"
+	},
+	function (){
+		changeChapterPlace(4, "Kosmiczny PierUg, 95% trasy")
+		data.stats.food-=.1
+		doTheEvent(c3u5e3v6)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, -.1, 0, 0, 0] //
+)
+let c3u5e3v1 = new MyEvent(
+	"bogosBinted/nerd.jpg",
+	[new MyLine(
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
+		"Odpowiedzieli!"
+	),
+	new MyLine(
+		"bogosBinted/nerd.jpg", "Nerd", colors["yellow"],
+		"Cieszę się, że udało nam się dojśc do porozumienia. Serdecznie zapraszamy na naszą planetę."
+	)],
+	"Świetnie, no to lecimy.",
+	"Super, przygotujmy się do lądowania.",
+	function (){
+		doTheEvent(c3u5e4v1)
+		//nextDub = "cuev"
+	},
+	function (){
+		doTheEvent(c3u5e4v1)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+let c3u5e3v2 = new MyEvent(
+	"bogosBinted/nerd.jpg",
+	[new MyLine(
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
+		"Odpowiedzieli!"
+	),
+	new MyLine(
+		"bogosBinted/nerd.jpg", "Nerd", colors["yellow"],
+		"A więc drogi Jakubie, jesteśmy w stanie wojny! Zobaczymy, kto tutaj wyjdzie na plus."
+	)],
+	"Czyli jednak się pobawimy działkami!",
+	"Musiy uciekać, niech Krzychu zmieni kurs",
+	function (){
+		doTheEvent(c3u5e4v3)
+		//nextDub = "cuev"
+	},
+	function (){
+		doTheEvent(c3u5e4v2)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+let c3u5e3v3 = new MyEvent(
+	"bogosBinted/nikita.jpg",
+	[new MyLine(
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
+		"Odpowiedzieli!"
+	),
+	new MyLine(
+		"bogosBinted/nikita.jpg", "Nikita", colors["darkblue"],
+		"Bardzo się cieszymy, serdecznie zapraszamy na naszą planetę."
+	)],
+	"Świetnie, no to lecimy.",
+	"Super, przygotujmy się do lądowania.",
+	function (){
+		doTheEvent(c3u5e4v1)
+		//nextDub = "cuev"
+	},
+	function (){
+		doTheEvent(c3u5e4v1)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+let c3u5e3v4 = new MyEvent(
+	"bogosBinted/nikita.jpg",
+	[new MyLine(
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
+		"Odpowiedzieli!"
+	),
+	new MyLine(
+		"bogosBinted/nikita.jpg", "Nikita", colors["darkblue"],
+		"Nie ufamy wam, nie jesteście rasą godną zaufania, a ty jako przywódca nie robisz nieczego, żeby to zmienić."
+	)],
+	"Czyli jednak się pobawimy działkami!",
+	"Musiy uciekać, niech Krzychu zmieni kurs",
+	function (){
+		doTheEvent(c3u5e4v4)
+		//nextDub = "cuev"
+	},
+	function (){
+		doTheEvent(c3u5e4v2)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+let c3u5e3v5 = new MyEvent( // nie ma 
+	"bogosBinted/agresus.jpg",
+	[new MyLine(
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
+		"Odpowiedzieli!"
+	),
+	new MyLine(
+		"bogosBinted/agresus.jpg", "Agresus", colors["red"],
+		"Nie będziemy zawiązywać sojoszu z takimi mięczakami. Lepiej uciekajcie, albo będziecie mieli kłopoty."
+	)],
+	"LewaOpcja",
+	"PrawaOpcja",
+	function (){
+		doTheEvent(c3u5e4v1)
+		//nextDub = "cuev"
+	},
+	function (){
+		doTheEvent(c3u5e4v1)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+let c3u5e3v6 = new MyEvent( // nie ma 
+	"bogosBinted/jakub.jpg",
+	[new MyLine(
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
+		"Odpowiedzieli!"
+	),
+	new MyLine(
+		"bogosBinted/agresus.jpg", "Agresus", colors["red"],
+		"Widzę, że nie da się waas tak łatwo nastraszyć! Wydajecie się być dobrymi towarzyszami walki, zawiążmy sojusz."
+	)],
+	"Czyli jednak się pobawimy działkami!",
+	"Musiy uciekać, niech Krzychu zmieni kurs",
+	function (){
+		doTheEvent(c3u5e4v5)
+		//nextDub = "cuev"
+	},
+	function (){
+		doTheEvent(c3u5e4v2)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+//============================================================================
+//==================================CHAPTER 4 W KONCUAHHHH====================
+//============================================================================
+
+let c4u1e1v1 = new MyEvent( //wojna domova (kim byl ten domov)
+	"bogosBinted/jakub.jpg",
+	[new MyLine(
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
+		"testline"
+	)],
+	"LewaOpcja",
+	"PrawaOpcja",
+	function (){
+		//doTheEvent(cuev)
+		//nextDub = "cuev"
+	},
+	function (){
+		//doTheEvent(cuev)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+let c4u1e1v2 = new MyEvent( //ucieczka
+	"bogosBinted/krzychu.jpg",
+	[new MyLine(
+		"bogosBinted/krzychu.jpg", "Krzychu", colors["orange"],
+		"Jesteś pewien? Może nam nie wystarczyć paliwa do najbliższej planety"
+	)],
+	"Jestem pewien.",
+	"Nie mamy wyboru",
+	function (){
+		//doTheEvent(cuev)
+		//nextDub = "cuev"
+	},
+	function (){
+		//doTheEvent(cuev)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+let c4u1e1v3 = new MyEvent(
+	"bogosBinted/jakub.jpg",
+	[new MyLine(
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
+		"testline"
 	)],
 	"LewaOpcja",
 	"PrawaOpcja",
@@ -3381,6 +4052,47 @@ let c3u3e3v1 = new MyEvent(
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
 )
 
+let c4u1e1v4 = new MyEvent(
+	"bogosBinted/jakub.jpg",
+	[new MyLine(
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
+		"testline"
+	)],
+	"LewaOpcja",
+	"PrawaOpcja",
+	function (){
+		//doTheEvent(cuev)
+		//nextDub = "cuev"
+	},
+	function (){
+		//doTheEvent(cuev)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+let c4u1e1v5 = new MyEvent(
+	"bogosBinted/jakub.jpg",
+	[new MyLine(
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
+		"testline"
+	)],
+	"LewaOpcja",
+	"PrawaOpcja",
+	function (){
+		//doTheEvent(cuev)
+		//nextDub = "cuev"
+	},
+	function (){
+		//doTheEvent(cuev)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+
 // endOfTheGame("NAPIS KONCOWY", "ZDJECIE (BEZ url(bogosBinted/)")
 
 // ZEBY WLACZYC KOLEJNA IKONKE STATOW TRZEBA WPISAC showIcons(np. nerds/alienRelations)
@@ -3388,6 +4100,7 @@ let c3u3e3v1 = new MyEvent(
 // KURWO MIAŁEŚ BYĆ O ~19
 // Kto xdddd o huj chodzi
 // ^^^^^ O ten tramwaj co nie biega
+//JEBLEMBABENAPAAAAAASAAACH
 
 /*
 let cuev = new MyEvent(
