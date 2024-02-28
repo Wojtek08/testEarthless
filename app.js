@@ -1115,7 +1115,6 @@ let c0u1e1 = new MyEvent(
 	function (){
 		doTheEvent(c0u1e2);
 		nextDub = "c0u1e2";
-		endOfTheGame("dupa", "endingScreen")
 	},
 	function (){
 		doTheEvent(c0u1e2);
@@ -4339,7 +4338,6 @@ let c4u1e1v5 = new MyEvent(
 	"c4u1e1v5L",
 	"c4u1e1v5R"
 )
-
 
 // endOfTheGame("NAPIS KONCOWY", "ZDJECIE (BEZ url(bogosBinted/)")
 
