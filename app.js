@@ -625,7 +625,7 @@ function statsChanger(element1, list) {
 		if (data.stats.currency <= 0) {
 			data.stats.currency = 0;
 			nextDub = ""
-			gameOverFunction("gameOver", "Zbankrutowałeś.");
+			gameOverFunction("gameOver", "Zbankrutował eś, nie jesteś już w stanie finansować państwa. .");
 		} else if (data.stats.currency > 1) {
 			data.stats.currency = 1;
 		}
@@ -633,7 +633,7 @@ function statsChanger(element1, list) {
 		if (data.stats.adviser <= 0) {
 			data.stats.adviser = 0;
 			nextDub = ""
-			gameOverFunction("gameOver", "Twoja reputacja spadła do zera.");
+			gameOverFunction("gameOver", "Marcin bym źle traktowany, zbuntował się i odsunął Cię od władzy.");
 		} else if (data.stats.adviser > 1) {
 			data.stats.adviser = 1;
 		}
@@ -641,7 +641,7 @@ function statsChanger(element1, list) {
 		if (data.stats.research <= 0) {
 			data.stats.research = 0;
 			nextDub = ""
-			gameOverFunction("gameOver", "Za mały poziom badań.");
+			gameOverFunction("gameOver", "Twój zespół badawczy się zbuntował, bez nich sobie nie poradzisz.");
 		} else if (data.stats.research > 1) {
 			data.stats.research = 1;
 		}
@@ -649,7 +649,7 @@ function statsChanger(element1, list) {
 		if (data.stats.fuel <= 0) {
 			data.stats.fuel = 0;
 			nextDub = ""
-			gameOverFunction("gameOver", "Za mały poziom paliwa.");
+			gameOverFunction("gameOver", "Skończyło Ci się paliwo.");
 		} else if (data.stats.fuel > 1) {
 			data.stats.fuel = 1;
 		}
@@ -657,7 +657,7 @@ function statsChanger(element1, list) {
 		if (data.stats.food <= 0) {
 			data.stats.food = 0;
 			nextDub = ""
-			gameOverFunction("gameOverDeath", "Śmierć spowodowana brakiem jedzenia.");
+			gameOverFunction("gameOverDeath", "Twój kraj powoli umiera z głodu i epidemii.");
 		} else if (data.stats.food > 1) {
 			data.stats.food = 1;
 		}
@@ -3677,7 +3677,7 @@ let c3u4e1v2 = new MyEvent(
 	"bogosBinted/nikita.jpg",
 	[new MyLine(
 		"bogosBinted/nikita.jpg", "Nikita", colors["darkblue"],
-		"Witajcie ziemianie, jestem Nikita, przywódca Magikali. Mamy dobre intencje i mamy nadzieję, że wy też, haha. Zweryfikujemy to." //przywódczyni??
+		"Witajcie ziemianie, jestem Nikita, przywódca Magikali. Mamy dobre intencje i mamy nadzieję, że wy też, haha. Zweryfikujemy to."
 	)],
 	"Hmm ciekawe, zapytam Marcina co możnaby im odpowiedzieć.",
 	"Marcin, podejdź tu! Sprawa jest.",
@@ -4372,70 +4372,4 @@ let c4u1e1v3 = new MyEvent(
 	"c4u1e1v3R"
 )
 
-// endOfTheGame("NAPIS KONCOWY", "ZDJECIE (BEZ url(bogosBinted/)")
-
-// ZEBY WLACZYC KOLEJNA IKONKE STATOW TRZEBA WPISAC showIcons(np. nerds/alienRelations)
-// szczerze?
-// KURWO MIAŁEŚ BYĆ O ~19
-// Kto xdddd o huj chodzi
-// ^^^^^ O ten tramwaj co nie biega
-// JEBLEMBABENAPAAAAAASAAACH
-// Stary 15:00 i gotowe cnie???? CNIEEEE??
-
-/*
-let cuev = new MyEvent(
-	"bogosBinted/jakub.jpg",
-	[new MyLine(
-		"bogosBinted/jakub.jpg", "Jakub", colors[],
-		"testline"
-	)],
-	"LewaOpcja",
-	"PrawaOpcja",
-	function (){
-		//doTheEvent(cuev)
-		//nextDub = "cuev"
-	},
-	function (){
-		//doTheEvent(cuev)
-		//nextDub = "cuev"
-	},
-	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
-	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
-)
-*/
-
-// W TYM MA BYC ZROBIONY OSTATNI SLAJD PRZED WYBOREM ZMIANY PLANETY
-// let cuev = new MyEvent(
-// 	"bogosBinted/jakub.jpg",
-// 	[new MyLine(
-// 		"bogosBinted/jakub.jpg", "Jakub", colors['green'],
-// 		"testline"
-// 	)],
-// 	"LewaOpcja",
-// 	"PrawaOpcja",
-// 	function (){
-// 		changePlanet();
-// 	},
-// 	function (){
-// 		changePlanet();
-// 	},
-// 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
-// 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
-// )
-
-// ZEBY WLACZYC KOLEJNA IKONKE STATOW TRZEBA WPISAC showIcons(np. nerds/alienRelations)
-// szczerze?
-
 doTheEvent(c0u1e1);
-
-//pierwsze problemy na statku
-
-//przygotować się do życia na nowej planecie (inagle)
-
-//kontakt z cywilizacjami (notion)
-
-//wybrać układy z cywilizacjami
-
-//wojna / domowa (jebany domov)
-
-//DOROBIC POWIADOMIENIA (na ez ale ja nie umiem)
