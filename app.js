@@ -3153,7 +3153,7 @@ let c3u1e2v1 = new MyEvent(
 )
 
 let c3u1e3v2 = new MyEvent(
-	"bogosBinted/gsg.jpg",
+	"bogosBinted/app.jpg",
 	[new MyLine(
 		"bogosBinted/noPfpUser.jpg", "", colors["grey"],
 		"Gratulacje, odblokowałeś drugi wynalazek: AutoPlanetoPilot! Tym razem jeszcze ujdzie Ci to na sucho, ale pamętaj, aby szanować Alberta."
@@ -3580,7 +3580,7 @@ let c3u3e4v2 = new MyEvent(
 )
 
 let c3u3e5v1 = new MyEvent(
-	"bogosBinted/Amina.jpg",
+	"bogosBinted/amina.jpg",
 	[new MyLine(
 		"bogosBinted/amina.jpg", "Amina", colors["lightpurple"],
 		"Jeśli chodzi o kolonizację to też mam sprawę. Musimy dodać tlen do atmosfery, a konkretniej zmienić go z dwutlenkiem węgla. Posadzenie tam roślin powinno załatwić sprawę, ale to zajmie sporo czasu i będzie bardzo kosztowne"
