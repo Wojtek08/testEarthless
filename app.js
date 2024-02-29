@@ -2920,8 +2920,9 @@ let c2u2e3v2 = new MyEvent(
 		nextDub = "c2u2e3v1"
 	},
 	function (){
-		data.marcinsDecision
+		data.marcinsDecision = true
 		showIcons(food, "Dostępna żywność")
+		showIcons(fuel, "Stan paliwa")
 		doTheEvent(c2u2e4v1);
 		nextDub = "c2u2e4v1"
 	},
@@ -3359,6 +3360,17 @@ let c3u2e2v3 = new MyEvent(
 			nextDub = "c3u2e3v2"
 		}
 	},
+	function (){
+		if(data.marcinsDecision){
+			data.stats.publicOpinion-=.2
+			data.stats.fuel+=.3
+			doTheEvent(c3u2e3v1);
+			nextDub = "c3u2e3v1"
+		}else{
+			doTheEvent(c3u2e3v2);
+			nextDub = "c3u2e3v2"
+		}
+	},
 	[0, 0, 0, .1, -.1, 0, 0, 0, 0],
 	[0, 0, 0, -.1, .1, 0, 0, 0, .1],
 	"c3u2e2v3L",
@@ -3373,6 +3385,17 @@ let c3u2e2v4 = new MyEvent(
 	)],
 	"Nie możemy już wpuścić więcej.",
 	"Wpuść każdego, kto będzie chciał!",
+	function (){
+		if(data.marcinsDecision){
+			data.stats.publicOpinion-=.2
+			data.stats.fuel+=.3
+			doTheEvent(c3u2e3v1);
+			nextDub = "c3u2e3v1"
+		}else{
+			doTheEvent(c3u2e3v2);
+			nextDub = "c3u2e3v2"
+		}
+	},
 	function (){
 		if(data.marcinsDecision){
 			data.stats.publicOpinion-=.2
@@ -3739,7 +3762,7 @@ let c3u4e3v1 = new MyEvent(
 )
 
 let c3u4e4v1 = new MyEvent(
-	"bogosBinted/plp.jpg",
+	"bogosBinted/dp.jpg",
 	[new MyLine(
 		"bogosBinted/albert.jpg", "Albert", colors["darkred"],
 		"Ha! Oto przed wami majestatyczna potęga - działko protonowe! To monstrum technologii, które przemienia mikroskopijne protony w niebezpieczne pociski o potężnej energii! Gdy te malutkie cząsteczki są wystrzeliwane z prędkością bliską światła, nic nie jest w stanie im się oprzeć. Przebijają się przez materiał jak gorący nóż przez masło, powodując chaos i zniszczenie na swojej drodze. To jak burza na horyzoncie, gotowa zaorać wszystko, co stanie na jej drodze! Ale, oczywiście, ja, jako twórca tej bestii, używam jej moc w pełnej świadomości i z najwyższą ostrożnością. Działko protonowe - symbol potęgi i siły ludzkiego umysłu, ale także ostrzeżenie przed jej niewłaściwym użyciem. Bo z wielką mocą przychodzi wielka odpowiedzialność, a ja jestem gotów ponieść tę odpowiedzialność w imię nauki i postępu!"
