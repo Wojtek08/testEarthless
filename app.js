@@ -938,7 +938,9 @@ function endOfTheGame(text, img) {
 		stats[8].textContent = "Relacje z cywilizacją agreSuSów: " + (data.stats.alienRelations.agreSuS * 100).toString() + "%";;
 	
 		let showCreators = document.createElement("div");
-		let buttonNode = document.createTextNode("Pokaż twórców");
+		showCreators.textContent = "Pokaż twórców"
+		showCreators.className = "showCreators"
+		div.insertAdjacentElement("beforeend", showCreators)
 
 		function showCreatorsDiv() {
 			body.textContent = "";
@@ -961,6 +963,10 @@ function endOfTheGame(text, img) {
 			piotr.textContent = "Piotr Chruścicki - dubbing: Marcin";
 			body.insertAdjacentElement("beforeend", piotr)
 
+			let wiktoria = document.createElement("h1");
+			wiktoria.textContent = "Wiktoria Jamrozik - dubbing: Nikita";
+			body.insertAdjacentElement("beforeend", wiktoria)
+
 			let zuzia = document.createElement("h1");
 			zuzia.textContent = "Zuzanna Zdebska - dubbing: Becia";
 			body.insertAdjacentElement("beforeend", zuzia)
@@ -968,10 +974,6 @@ function endOfTheGame(text, img) {
 			let maja = document.createElement("h1");
 			maja.textContent = "Maja Kieca - dubbing: Ilia";
 			body.insertAdjacentElement("beforeend", maja)
-
-			let wiktoria = document.createElement("h1");
-			wiktoria.textContent = "Wiktoria Jamrozik - dubbing: Nikita";
-			body.insertAdjacentElement("beforeend", wiktoria)
 
 			let dominika = document.createElement("h1");
 			dominika.textContent = "Dominika Golan - dubbing: Amina";
@@ -994,10 +996,11 @@ function endOfTheGame(text, img) {
 			body.insertAdjacentElement("beforeend", jeremi)
 		}
 
-		showCreatorsDiv()
+		showCreators.addEventListener("click", function() {
+			showCreatorsDiv()
+		})
 	}, 1000)
 }
-
 
 
 function changePlanet() {
@@ -4059,10 +4062,12 @@ let c3u5e3v2 = new MyEvent(
 	function (){
 		doTheEvent(c4u1e1v3)
 		nextDub = "c4u1e1v3"
+		changeChapterPlace(4, "")
 	},
 	function (){
 		doTheEvent(c4u1e1v2)
 		nextDub = "c4u1e1v2"
+		changeChapterPlace(4, "")
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -4084,10 +4089,12 @@ let c3u5e3v3 = new MyEvent(
 	function (){
 		doTheEvent(c4u1e1v1)
 		nextDub = "c4u1e1v1"
+		changeChapterPlace(4, "")
 	},
 	function (){
 		doTheEvent(c4u1e1v1)
 		nextDub = "c4u1e1v1"
+		changeChapterPlace(4, "")
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], 
@@ -4109,10 +4116,12 @@ let c3u5e3v4 = new MyEvent(
 	function (){
 		doTheEvent(c4u1e1v3)
 		nextDub = "c4u1e1v3"
+		changeChapterPlace(4, "")
 	},
 	function (){
 		doTheEvent(c4u1e1v2)
 		nextDub = "c4u1e1v2"
+		changeChapterPlace(4, "")
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -4132,12 +4141,12 @@ let c3u5e3v5 = new MyEvent(
 	"Świetnie, no to lecimy.",
 	"Super, przygotujmy się do lądowania.",
 	function (){
-		doTheEvent(c4u5e4v1)
-		nextDub = "c3u5e4v1"
+		doTheEvent(c4u1e1v1)
+		nextDub = "C4u1e1v1"
 	},
 	function (){
 		doTheEvent(c4u5e4v1)
-		nextDub = "c3u5e4v1"
+		nextDub = "C4u1e1v1"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], 
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], 
